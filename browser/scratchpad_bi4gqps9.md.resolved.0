@@ -1,0 +1,10 @@
+# Task: Capture Screenshot of Ratisa One-Pager
+
+## Goals
+- [ ] Open http://localhost:8787/ratisa_onepager.html (Already open)
+- [ ] Wait 5 seconds for loading
+- [ ] Take a screenshot of the top of the page
+- [ ] Save the screenshot and return the path
+
+## Progress
+- Initialized scratchpad.

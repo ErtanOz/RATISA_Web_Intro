@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RATISA – Projektvorstellung | Ertan Özcan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary:   #8B1A1A;
+      --primary-light: #b52b2b;
+      --accent:    #C4853A;
+      --dark:      #1a1a2e;
+      --text:      #2d2d2d;
+      --muted:     #6b7280;
+      --bg:        #f5f4f0;
+      --card:      #ffffff;
+      --border:    #e5e5e5;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* ── PRINT PAGE ── */
+    @page { size: A4; margin: 0; }
+    @media print {
+      body { background: white; }
+      .page { box-shadow: none; margin: 0; border-radius: 0; max-width: 100%; }
+      .no-print { display: none !important; }
+    }
+
+    /* ── LAYOUT ── */
+    .page {
+      max-width: 794px;        /* A4 width @96dpi */
+      margin: 32px auto;
+      background: var(--card);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,.12);
+    }
+
+    /* ── HEADER HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #2d1b1b 60%, #8B1A1A 100%);
+      color: white;
+      padding: 44px 48px 36px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 220px; height: 220px;
+      background: radial-gradient(circle, rgba(196,133,58,.35) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -40px; left: 30%;
+      width: 160px; height: 160px;
+      background: radial-gradient(circle, rgba(139,26,26,.4) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero-top {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .logo-badge {
+      width: 52px; height: 52px;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px;
+      flex-shrink: 0;
+    }
+    .hero-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.55);
+      margin-bottom: 3px;
+    }
+    .hero h1 {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -.5px;
+      line-height: 1.1;
+    }
+    .hero h1 span { color: var(--accent); }
+
+    .hero-sub {
+      font-size: 13.5px;
+      color: rgba(255,255,255,.75);
+      max-width: 520px;
+      line-height: 1.65;
+    }
+
+    .tag-row {
+      margin-top: 20px;
+      display: flex; flex-wrap: wrap; gap: 8px;
+    }
+    .tag {
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.2);
+      color: rgba(255,255,255,.85);
+      border-radius: 100px;
+      padding: 4px 12px;
+      font-size: 11.5px;
+      font-weight: 500;
+    }
+
+    /* ── BODY ── */
+    .body {
+      padding: 36px 48px;
+      display: grid;
+      gap: 32px;
+    }
+
+    /* ── SECTION TITLE ── */
+    .section-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 12px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ── INTRO TEXT ── */
+    .intro p {
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.75;
+    }
+    .intro strong { color: var(--primary); font-weight: 600; }
+
+    /* ── SCREENSHOTS ── */
+    .screenshots {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .screenshot-card {
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 14px rgba(0,0,0,.08);
+    }
+    .screenshot-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .screenshot-caption {
+      padding: 8px 12px;
+      font-size: 11px;
+      color: var(--muted);
+      background: #fafafa;
+      border-top: 1px solid var(--border);
+      font-weight: 500;
+    }
+
+    /* ── FEATURES GRID ── */
+    .features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .feature-item {
+      background: #fafafa;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .feature-icon {
+      font-size: 20px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .feature-name {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+    .feature-desc {
+      font-size: 11.5px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* ── MOTIVATION QUOTE ── */
+    .motivation-box {
+      background: linear-gradient(135deg, #fdf6ee, #fff9f5);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      padding: 18px 22px;
+    }
+    .motivation-box p {
+      font-size: 13.5px;
+      line-height: 1.75;
+      color: var(--text);
+    }
+    .motivation-box strong { color: var(--primary); }
+
+    /* ── TECH ROW ── */
+    .tech-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .tech-pill {
+      background: #f0f0f5;
+      border-radius: 100px;
+      padding: 5px 14px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--dark);
+      border: 1px solid #e0e0ec;
+    }
+    .tech-pill span { color: var(--primary); font-weight: 700; }
+
+    /* ── FOOTER ── */
+    .footer {
+      background: var(--dark);
+      color: rgba(255,255,255,.6);
+      padding: 18px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11.5px;
+    }
+    .footer strong { color: white; }
+    .footer a { color: var(--accent); text-decoration: none; }
+
+    /* ── PRINT BUTTON ── */
+    .print-btn {
+      position: fixed;
+      bottom: 24px; right: 24px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 100px;
+      padding: 12px 24px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(139,26,26,.4);
+      transition: transform .15s, box-shadow .15s;
+    }
+    .print-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(139,26,26,.5);
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-top">
+      <div class="logo-badge">🏛️</div>
+      <div>
+        <div class="hero-label">Eigenprojekt · 2026</div>
+        <h1>RATISA – <span>Köln</span> Ratinformation<br>System Assistent</h1>
+      </div>
+    </div>
+    <p class="hero-sub">
+      Ein digitales Werkzeug, das die Arbeit des Kölner Stadtrats für Bürgerinnen, Bürger und Verwaltung transparent, durchsuchbar und verständlich macht.
+    </p>
+    <div class="tag-row">
+      <span class="tag">🌐 Web-Anwendung</span>
+      <span class="tag">🤖 KI-gestützte Suche</span>
+      <span class="tag">🏙️ Stadt Köln · OParl-Daten</span>
+      <span class="tag">🔓 Öffentlich zugänglich</span>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+
+    <!-- WHAT IS RATISA -->
+    <div class="intro">
+      <div class="section-title">Das Projekt</div>
+      <p>
+        Kommunalpolitische Informationen sind in Deutschland zwar öffentlich, aber selten wirklich zugänglich. 
+        Das offizielle Ratsinformationssystem der Stadt Köln enthält tausende Beschlüsse, Sitzungen und Anträge – 
+        doch die Navigation ist für normale Bürgerinnen und Bürger kaum intuitiv nutzbar.<br><br>
+        <strong>RATISA löst dieses Problem:</strong> Eine moderne, übersichtliche Oberfläche macht alle Ratsdaten 
+        durchsuch- und filterbar. Wer wissen möchte, wann ein Ausschuss tagt oder welche Vorlagen zu einem Thema 
+        vorliegen, findet die Antwort in Sekunden – inklusive KI-unterstützter Suche in natürlicher Sprache.
+      </p>
+    </div>
+
+    <!-- SCREENSHOTS -->
+    <div>
+      <div class="section-title">Einblick in die Anwendung</div>
+      <div class="screenshots">
+        <div class="screenshot-card">
+          <img src="ratisa_screen1.png" alt="RATISA Dashboard" />
+          <div class="screenshot-caption">📊 Dashboard – Übersicht & Themenatlas</div>
+        </div>
+        <div class="screenshot-card">
+          <img src="ratisa_screen2.png" alt="RATISA Sitzungsübersicht" />
+          <div class="screenshot-caption">📅 Sitzungen – 134 Termine mit Filterfunktion</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FEATURES -->
+    <div>
+      <div class="section-title">Funktionen</div>
+      <div class="features">
+        <div class="feature-item">
+          <div class="feature-icon">🔍</div>
+          <div>
+            <div class="feature-name">Intelligente Suche</div>
+            <div class="feature-desc">KI-gestützte Suche in natürlicher Sprache – keine Fachkenntnisse nötig</div>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">📅</div>
+          <div>
+            <div class="feature-name">Sitzungskalender</div>
+            <div class="feature-desc">Alle Rats- und Ausschusstermine mit Datum und Filtermöglichkeit</div>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">📄</div>
+          <div>
+            <div class="feature-name">Vorlagen & Beschlüsse</div>
+            <div class="feature-desc">Anträge, Verwaltungsvorlagen und Entscheidungen auf einen Blick</div>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🗺️</div>
+          <div>
+            <div class="feature-name">Themenatlas</div>
+            <div class="feature-desc">Räumliche Zuordnung: Wo betreffen Themen die Stadt besonders?</div>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">👥</div>
+          <div>
+            <div class="feature-name">Personen & Gremien</div>
+            <div class="feature-desc">Alle Ratsmitglieder, Ausschüsse und Zuständigkeiten einsehbar</div>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">⭐</div>
+          <div>
+            <div class="feature-name">Merkliste & Archiv</div>
+            <div class="feature-desc">Wichtige Themen speichern, ältere Beschlüsse im Archiv finden</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOTIVATION -->
+    <div>
+      <div class="section-title">Warum dieses Projekt?</div>
+      <div class="motivation-box">
+        <p>
+          Dieses Projekt entstand aus eigener Initiative – ohne Auftraggeber, ohne Vorgaben. 
+          Es zeigt mein Interesse an der Schnittstelle zwischen <strong>Verwaltung, Digitalisierung und Bürgerservice</strong>. 
+          Ich bin überzeugt, dass gut gestaltete digitale Werkzeuge die öffentliche Verwaltung stärken 
+          und Bürgerinnen und Bürgern echte Teilhabe ermöglichen.<br><br>
+          RATISA steht für meine Arbeitsweise: <strong>eigenverantwortlich, lösungsorientiert und immer mit Blick auf den Menschen</strong>, 
+          der die Anwendung am Ende nutzt.
+        </p>
+      </div>
+    </div>
+
+    <!-- TECH -->
+    <div>
+      <div class="section-title">Umsetzung (vereinfacht)</div>
+      <div class="tech-row">
+        <div class="tech-pill"><span>Datenquelle:</span> Offizielle OParl-Schnittstelle der Stadt Köln</div>
+        <div class="tech-pill"><span>Oberfläche:</span> Moderne Web-App, mobil optimiert</div>
+        <div class="tech-pill"><span>KI:</span> Google Gemini 2.0</div>
+        <div class="tech-pill"><span>Status:</span> Live · produktiv eingesetzt</div>
+        <div class="tech-pill"><span>Umsetzung:</span> Vollständig selbstständig</div>
+      </div>
+    </div>
+
+  </div><!-- /body -->
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div>Entwickelt von <strong>Ertan Özcan</strong> &nbsp;·&nbsp; <a href="https://digitalheritagelab.com">digitalheritagelab.com</a></div>
+    <div>Köln &nbsp;·&nbsp; 2026</div>
+  </div>
+
+</div><!-- /page -->
+
+<button class="print-btn no-print" onclick="window.print()">🖨️ Als PDF speichern</button>
+
+</body>
+</html>

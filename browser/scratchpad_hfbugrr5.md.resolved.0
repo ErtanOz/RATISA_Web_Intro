@@ -1,0 +1,13 @@
+# RATISA One-Pager Task
+
+## Goals:
+1. Open RATISA app (localhost:5173, 5174, or 3000).
+2. Take screenshot of main interface.
+3. Take screenshot of a second view (search results for "Stadtrat").
+4. Describe the interface for the one-pager.
+
+## Progress:
+- [ ] Find working URL
+- [ ] Screenshot 1: Main interface
+- [ ] Screenshot 2: Second view
+- [ ] Document descriptions
