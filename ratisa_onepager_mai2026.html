@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RATISA – Mai 2026 Updates</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif; 
+  background: linear-gradient(135deg, #f9f7f4 0%, #faf8f5 100%);
+  color: #2d2d2d;
+  line-height: 1.6;
+  padding: 40px 20px;
+}
+.container { max-width: 900px; margin: 0 auto; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.12); }
+.hero {
+  background: linear-gradient(135deg, #1a1a2e 0%, #2d1b1b 60%, #8B1A1A 100%);
+  color: white;
+  padding: 48px;
+  text-align: center;
+}
+.badge { 
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+h1 { font-size: 36px; font-weight: 800; margin: 16px 0; }
+h1 span { color: #C4853A; }
+.subtitle { font-size: 16px; color: rgba(255,255,255,0.8); max-width: 600px; margin: 16px auto; }
+.content { padding: 48px; }
+.section { margin-bottom: 40px; }
+.section-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #8B1A1A;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #8B1A1A;
+  padding-bottom: 8px;
+  display: inline-block;
+}
+.update-banner {
+  background: linear-gradient(135deg, #fdf6ee 0%, #fff9f5 100%);
+  border-left: 4px solid #C4853A;
+  padding: 20px 24px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.update-banner h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #8B1A1A;
+  margin-bottom: 12px;
+}
+.update-list { display: grid; gap: 12px; }
+.update-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+}
+.update-item::before {
+  content: '✅';
+  flex-shrink: 0;
+  font-size: 16px;
+}
+.update-item strong { color: #8B1A1A; font-weight: 600; }
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 16px;
+}
+.feature {
+  background: #fafafa;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 16px;
+  border-left: 3px solid #8B1A1A;
+}
+.feature-icon { font-size: 20px; margin-bottom: 8px; }
+.feature-name { font-size: 13px; font-weight: 600; color: #2d2d2d; margin-bottom: 4px; }
+.feature-desc { font-size: 12px; color: #6b7280; line-height: 1.5; }
+.quote {
+  background: linear-gradient(135deg, #fdf6ee 0%, #fff9f5 100%);
+  border-left: 4px solid #C4853A;
+  padding: 20px 24px;
+  border-radius: 8px;
+  margin: 24px 0;
+  font-style: italic;
+  color: #2d2d2d;
+}
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+.tech-item {
+  background: #f0f0f5;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  border: 1px solid #e0e0ec;
+}
+.tech-item strong { color: #8B1A1A; }
+.links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 16px;
+}
+.link {
+  display: block;
+  background: #fafafa;
+  border: 1px solid #e5e5e5;
+  padding: 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #2d2d2d;
+  transition: all 0.2s;
+}
+.link:hover { border-color: #C4853A; background: #fef8f3; }
+.link-label { font-size: 11px; font-weight: 700; color: #8B1A1A; text-transform: uppercase; margin-bottom: 4px; letter-spacing: 0.5px; }
+.link-url { font-size: 12px; color: #54728a; word-break: break-all; }
+.footer {
+  background: #1a1a2e;
+  color: rgba(255,255,255,0.6);
+  padding: 24px 48px;
+  text-align: center;
+  font-size: 12px;
+}
+.footer strong { color: white; }
+.footer a { color: #C4853A; text-decoration: none; }
+@media (max-width: 768px) {
+  .features { grid-template-columns: 1fr; }
+  .tech-grid { grid-template-columns: 1fr; }
+  .links { grid-template-columns: 1fr; }
+  h1 { font-size: 28px; }
+  .content { padding: 24px; }
+  .hero { padding: 32px 24px; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- HERO -->
+  <div class="hero">
+    <div class="badge">🚀 MAI 2026 UPDATE</div>
+    <h1>RATISA – <span>Köln</span> Ratinformation System Assistent</h1>
+    <p class="subtitle">Ein digitales Werkzeug, das Kölner Ratsinformationen für alle verständlich macht – jetzt global, intelligenter und schneller.</p>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+    
+    <!-- UPDATE SECTION -->
+    <div class="section">
+      <h2 class="section-title">🎯 Was ist neu?</h2>
+      <div class="update-banner">
+        <h3>Neue Features aus der OKLab-Sitzung</h3>
+        <div class="update-list">
+          <div class="update-item">
+            <strong>7 Sprachen verfügbar</strong> – Globale Zugänglichkeit für Ratsinformationen weltweit
+          </div>
+          <div class="update-item">
+            <strong>AI-Zusammenfassungen in 7 Sprachen</strong> – Verstehe das Wesentliche, ohne Sprachbarrieren
+          </div>
+          <div class="update-item">
+            <strong>MCP Server optimiert</strong> – Schneller, stabiler, besser und intelligenter
+          </div>
+          <div class="update-item">
+            <strong>Dashboard überarbeitet</strong> – Neue Metriken, bessere Navigation und intuitivere Bedienung
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FEATURES -->
+    <div class="section">
+      <h2 class="section-title">✨ Kernfunktionen</h2>
+      <div class="features">
+        <div class="feature">
+          <div class="feature-icon">🔍</div>
+          <div class="feature-name">Intelligente Suche</div>
+          <div class="feature-desc">KI-gestützte Suche in natürlicher Sprache</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">📅</div>
+          <div class="feature-name">Sitzungskalender</div>
+          <div class="feature-desc">Alle Rats- und Ausschusstermine übersichtlich</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">📄</div>
+          <div class="feature-name">Vorlagen & Beschlüsse</div>
+          <div class="feature-desc">Anträge und Entscheidungen einsehbar</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🗺️</div>
+          <div class="feature-name">Themenatlas</div>
+          <div class="feature-desc">Räumliche Zuordnung von Themen in Köln</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">👥</div>
+          <div class="feature-name">Personen & Gremien</div>
+          <div class="feature-desc">Ratsmitglieder und Ausschüsse ansehen</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">⭐</div>
+          <div class="feature-name">Merkliste & Archiv</div>
+          <div class="feature-desc">Themen speichern und verfolgen</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🌍</div>
+          <div class="feature-name">Mehrsprachig (NEU)</div>
+          <div class="feature-desc">7 Sprachen für globale Teilhabe</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🤖</div>
+          <div class="feature-name">AI-Zusammenfassungen (NEU)</div>
+          <div class="feature-desc">Automatische Zusammenfassungen</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOTIVATION -->
+    <div class="section">
+      <div class="quote">
+        <strong>Technik ist erst dann gut, wenn sie den Menschen hilft.</strong><br><br>
+        Deshalb brauchen wir euch: Testet die neuen Features und gebt uns euer ehrliches Feedback. Was wünscht ihr euch als Nächstes für RATISA?
+      </div>
+    </div>
+
+    <!-- TECH STACK -->
+    <div class="section">
+      <h2 class="section-title">🛠 Technische Umsetzung</h2>
+      <div class="tech-grid">
+        <div class="tech-item"><strong>Datenquelle:</strong> OParl Stadt Köln</div>
+        <div class="tech-item"><strong>Frontend:</strong> Moderne Web-App, mobil optimiert</div>
+        <div class="tech-item"><strong>KI:</strong> Google Gemini 2.0</div>
+        <div class="tech-item"><strong>MCP Server:</strong> Optimiert für beste Performance</div>
+        <div class="tech-item"><strong>Sprachen:</strong> 7 Sprachen integriert</div>
+        <div class="tech-item"><strong>Status:</strong> Live · Produktiv eingesetzt</div>
+      </div>
+    </div>
+
+    <!-- LINKS -->
+    <div class="section">
+      <h2 class="section-title">🔗 Projekt online ansehen</h2>
+      <div class="links">
+        <a href="https://digitalheritagelab.com/ratisa/" target="_blank" class="link">
+          <div class="link-label">🌐 Live-WebApp</div>
+          <div class="link-url">digitalheritagelab.com/ratisa/</div>
+        </a>
+        <a href="https://youtu.be/glwOeh7bFUE" target="_blank" class="link">
+          <div class="link-label">▶️ Demo-Video</div>
+          <div class="link-url">youtu.be/glwOeh7bFUE</div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    Entwickelt von <strong>Ertan Özcan</strong> · <a href="https://digitalheritagelab.com">digitalheritagelab.com</a><br>
+    Köln · Mai 2026 | Ein Civic-Tech-Experiment aus OpenSource, OpenData und persönlicher Motivation
+  </div>
+</div>
+
+</body>
+</html>

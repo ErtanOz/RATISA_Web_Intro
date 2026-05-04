@@ -1,15 +1,5 @@
 # RATISA – Köln Ratinformation System Assistent
 
-> [!IMPORTANT]
-> **Fertige Dateien:**
-> - 🖨️ **HTML (druckbereit):** [ratisa_onepager.html](file:///C:/Users/Ertan/.gemini/antigravity/brain/6dcf7686-0f5a-4dab-9a4e-a9abb361416b/ratisa_onepager.html) – Im Browser öffnen → `Als PDF speichern` klicken
-> - Vorschau: http://localhost:8787/ratisa_onepager.html
-
-## Vorschau
-
-![One-Pager Vorschau – RATISA Projektdarstellung für Bewerbung](C:\Users\Ertan\.gemini\antigravity\brain\6dcf7686-0f5a-4dab-9a4e-a9abb361416b\ratisa_onepager_preview_1776354487028.png)
-
-
 > Ein digitales Werkzeug, das Kölner Ratsinformationen für alle verständlich macht.
 
 ---
@@ -22,20 +12,21 @@ Statt sich durch unübersichtliche Behördenportale klicken zu müssen, bietet R
 
 ---
 
-## Screenshots
+## 🚀 Mai 2026 Update
 
-````carousel
-![RATISA Dashboard – Startseite mit Willkommensbereich, Sitzungsübersicht und Themenatlas](C:\Users\Ertan\.gemini\antigravity\brain\6dcf7686-0f5a-4dab-9a4e-a9abb361416b\ratisa_screen1.png)
-<!-- slide -->
-![RATISA Sitzungen – Gefilterte Terminübersicht mit 134 Ergebnissen und Datumsfilter](C:\Users\Ertan\.gemini\antigravity\brain\6dcf7686-0f5a-4dab-9a4e-a9abb361416b\ratisa_screen2.png)
-````
+Direkt aus der OKLab Köln Sitzung bringen wir spannende neue Features:
+
+✅ **7 Sprachen verfügbar** – Globale Zugänglichkeit für Ratsinformationen weltweit
+✅ **AI-Zusammenfassungen in 7 Sprachen** – Verstehe das Wesentliche, ohne Sprachbarrieren
+✅ **MCP Server optimiert** – Schneller, stabiler, besser und intelligenter
+✅ **Dashboard überarbeitet** – Neue Metriken, bessere Navigation und intuitivere Bedienung
 
 ---
 
 ## Was kann die Anwendung?
 
 | Funktion | Was das bedeutet |
-|---|---|
+| --- | --- |
 | 🔍 **Suche** | Ratsbeschlüsse, Vorlagen und Sitzungen gezielt finden |
 | 📅 **Sitzungen** | Alle Termine der Kölner Ratsgremien auf einen Blick |
 | 📄 **Vorlagen** | Anträge und Dokumente direkt einsehbar |
@@ -43,6 +34,8 @@ Statt sich durch unübersichtliche Behördenportale klicken zu müssen, bietet R
 | 🗺️ **Themenatlas** | Wo in Köln betreffen Themen die Stadt besonders? |
 | 🤖 **KI-Assistent** | Natürlichsprachliche Fragen an das System stellen |
 | ⭐ **Merkliste** | Interessante Themen speichern und verfolgen |
+| 🌍 **Mehrsprachig (NEU)** | In 7 Sprachen für echte globale Teilhabe |
+| 🤖 **AI-Zusammenfassungen (NEU)** | Automatische Zusammenfassungen in allen Sprachen |
 
 ---
 
@@ -58,7 +51,9 @@ RATISA zeigt, dass digitale Verwaltungsinformation nicht kompliziert sein muss. 
 
 - **Datenquelle:** Offizielle OParl-Schnittstelle der Stadt Köln
 - **Oberfläche:** Moderne Web-App, mobil optimiert
-- **Künstliche Intelligenz:** Google Gemini unterstützt bei der Suche
+- **Künstliche Intelligenz:** Google Gemini 2.0 unterstützt bei der Suche und Zusammenfassung
+- **MCP Server:** Optimiert für schnellste und stabilste Performance
+- **Mehrsprachigkeit:** Technische Integration von 7 Sprachen
 - **Vollständig selbstständig** geplant, entwickelt und veröffentlicht
 
 ---
@@ -69,4 +64,13 @@ Dieses Projekt zeigt mein Interesse an der Schnittstelle zwischen **Verwaltung, 
 
 ---
 
-*Entwickelt von Ertan Özcan · digitalheritagelab.com · 2026*
+## Links
+
+- 🌐 **Live-WebApp:** https://digitalheritagelab.com/ratisa/
+- 📄 **One-Pager:** https://digitalheritagelab.com/ratisa_intro/
+- ▶️ **Demo-Video:** https://youtu.be/glwOeh7bFUE
+- 🔗 **Alternative WebApp:** https://shiny-cuchufli-56111d.netlify.app/
+
+---
+
+*Entwickelt von Ertan Özcan · digitalheritagelab.com · Mai 2026*
