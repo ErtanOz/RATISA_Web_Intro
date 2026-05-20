@@ -13,14 +13,14 @@
     ) {
       storedPreference = storedValue;
     }
-  } catch (error) {}
+  } catch (error) {
+    console.warn("RATISA Theme: Could not access localStorage.", error);
+  }
 
-  var resolvedTheme =
-    storedPreference === "system"
-      ? mediaQuery && mediaQuery.matches
-        ? "dark"
-        : "light"
-      : storedPreference;
+  var resolvedTheme = storedPreference;
+  if (storedPreference === "system") {
+    resolvedTheme = mediaQuery && mediaQuery.matches ? "dark" : "light";
+  }
 
   document.documentElement.dataset.theme = resolvedTheme;
   document.documentElement.classList.toggle("dark", resolvedTheme === "dark");
